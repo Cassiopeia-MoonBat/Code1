@@ -20,5 +20,11 @@ How to create a markdown file. -> .md
   * pull -> getting the changes into your workpace
   * merge -> merging two commits into one
  
- ### Task 01.03
- 
+### Task 01.03
+* exlude sth from being tracked
+    * The .gitignore file tells Git which files and folders to ignore (not track).
+    * This is useful for keeping log files, temporary files, build artifacts, or personal files out of your repository.
+    * Examples of files to ignore: log files, temporary files, hidden files, personal files, OS/editor files, etc.
+* changes but want back to last commit: 
+* discarding all changes:  
+* discarding all the changes, temporarily:
