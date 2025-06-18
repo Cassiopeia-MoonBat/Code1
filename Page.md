@@ -1,2 +1,2 @@
-#Bat
-![test](bat.png)
+# Bat
+![Bat](bat.png)
