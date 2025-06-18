@@ -2,5 +2,5 @@
 > It is very pretty,
 > We love coding ✨
 
-## here is a bat
-![](bat.png)
+## here is a cat
+![](spinningcat.gif)
