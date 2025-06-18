@@ -28,6 +28,8 @@ How to create a markdown file. -> .md
 * changes but want back to last commit: 
 * discarding all changes:  
 * discarding all the changes, temporarily:
+* delete untracked files from local folder 
+* difference: merge, rebase, squash
 
 ## 16:06. wir sind am Ente
 ![](ente.jpg)
