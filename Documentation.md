@@ -25,10 +25,10 @@ How to create a markdown file. -> .md
     * The .gitignore file tells Git which files and folders to ignore (not track).
     * This is useful for keeping log files, temporary files, build artifacts, or personal files out of your repository.
     * Examples of files to ignore: log files, temporary files, hidden files, personal files, OS/editor files, etc.
-* changes but want back to last commit: 
-* discarding all changes:  
-* discarding all the changes, temporarily:
-* delete untracked files from local folder 
+* changes but want back to last commit: git revert HEAD - Revert the latest commit
+* discarding all changes: git reset --hard <commit> - Move HEAD to commit, discard all changes
+* discarding all the changes, temporarily: git reset --mixed <commit> - Move HEAD to commit, unstage changes (default)
+* delete untracked files from local folder: git-clean - Remove untracked files from the working tree
 * difference: merge, rebase, squash
 
 ## 16:06. wir sind am Ente
