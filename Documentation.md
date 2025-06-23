@@ -32,7 +32,7 @@ How to create a markdown file. -> .md
 * difference: merge, rebase, squash
 
 ## 16:06. wir sind am Ente
-![](\Hello\ente.jpg)
+![](Hello\ente.jpg)
 
 
 
