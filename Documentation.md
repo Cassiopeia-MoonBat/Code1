@@ -54,7 +54,8 @@ How to create a markdown file. -> .md
 ![](/Hello/DOM.gif)
 
 ### Task 2.4
-*
+* https://www.w3schools.com/html/default.asp
+* https://webcode.tools/
 
 
 ## 23.06 14:44 wir sind am Ente.com
