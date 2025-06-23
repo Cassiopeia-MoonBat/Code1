@@ -47,4 +47,9 @@ How to create a markdown file. -> .md
 * The first well-known public presentation of markup languages in computer text processing was made by William W. Tunnicliffe at a conference in 1967, although he preferred to call it generic coding
 * Syntax is the arrangement of elements and attributes to create well-formed documents. example: Doctype declaration. 
   A semantic element clearly describes its meaning to both the browser and the developer. example: <img>, <table>
-*
+
+### Task 2.2 
+*The HTML DOM (Document Object Model)
+When a web page is loaded, the browser creates a Document Object Model of the page.
+The HTML DOM model is constructed as a tree of Objects:
+![](/Hello/DOM)
