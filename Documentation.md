@@ -33,3 +33,18 @@ How to create a markdown file. -> .md
 
 ## 16:06. wir sind am Ente
 ![](ente.jpg)
+
+
+
+
+
+
+## Task 2
+
+### Task 2.1
+* HTML Hypertext Markup Language
+* Tim Berners-Lee, 1991, published 1999, to enable researchers to share and link documents easily over the internet
+* The first well-known public presentation of markup languages in computer text processing was made by William W. Tunnicliffe at a conference in 1967, although he preferred to call it generic coding
+* Syntax is the arrangement of elements and attributes to create well-formed documents. example: Doctype declaration. 
+  A semantic element clearly describes its meaning to both the browser and the developer. example: <img>, <table>
+*
