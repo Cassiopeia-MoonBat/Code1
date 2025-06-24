@@ -134,3 +134,30 @@ How to create a markdown file. -> .md
 * flex-direction: column-reverse; align-content: center;
 * flex-flow: column-reverse wrap-reverse; justify-content: center; align-content: space-between;
 
+### Grid
+
+* grid-template-columns: 50% 50%;
+* grid-template-columns: 20% 40% 40%;
+* grid-template-columns: repeat(4,25%);
+* grid-template-columns: repeat(3,30%);
+* grid-template-columns: 100px 30%;
+* grid-template-columns: repeat(3, 1fr);
+* grid-template-columns: repeat(4, 1fr);
+* grid-template-columns: 100px repeat(3, 1fr);
+* grid-template-columns: 20% 100px 1fr;
+* grid-template-columns: 1fr auto 1fr;
+  
+* grid-template-columns: 25% 50% 25%; grid-template-rows: 100px 150px 1fr;
+  
+* grid-template-columns: 1fr 2fr 1fr; grid-template-rows: 1fr 2fr 1fr;
+  
+* grid-template-columns: 1fr 2fr 1fr; grid-template-rows: 1fr 2fr 1fr; column-gap: 15px;
+
+* grid-template-columns: 1fr 2fr 1fr; grid-template-rows: 1fr 2fr 1fr; column-gap: 5%;
+
+* grid-template-columns: 1fr 2fr 1fr; grid-template-rows: 1fr 2fr 1fr; row-gap: 40px;
+
+* column-gap:10px; row-gap:15%;
+
+* gap: 20px 20px;
+  
