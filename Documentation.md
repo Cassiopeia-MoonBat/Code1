@@ -103,7 +103,7 @@ How to create a markdown file. -> .md
 * 27: \[for\]
 * 28: plate\[for\]
 * 29: \[for="Vitaly"\]
-* 30: \[for="Vitaly"\]
+* 30: \[for^="Sa"\]
 * 31: \[for$="ato"\]
 * 32: \[for*="obb"\]
 
