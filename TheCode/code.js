@@ -27,8 +27,13 @@ var Post;
     console.log(orange);
 })(Post || (Post = {}));
 console.log("following the Nim game");
-let nim1 = 1;
-let nim1 = 1;
-let nim1 = 1;
-let nim1 = 1;
+let nim1 = 4;
+let nim2 = 7;
+let nim3 = 5;
+let nim4 = 3;
+let nimtemp;
+nimtemp = nim1 ^ nim2;
+nimtemp = nimtemp ^ nim3;
+nimtemp = nimtemp ^ nim4;
+console.log(nimtemp);
 //# sourceMappingURL=code.js.map
