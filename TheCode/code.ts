@@ -46,3 +46,14 @@ nimtemp = nim1 ^ nim2;
 nimtemp = nimtemp ^ nim3;
 nimtemp = nimtemp ^ nim4;
 console.log(nimtemp);
+
+
+
+let banana: number = 2  ;
+if (banana == 1) {
+    console.log("Hello");
+}
+else{
+    console.log("Nö");
+}
+console.log("Done");
