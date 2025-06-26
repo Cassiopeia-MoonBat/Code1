@@ -19,11 +19,9 @@ console.log(x);
 console.log(y);
 var Post;
 (function (Post) {
-    let orange;
-    0;
+    let orange = 0;
     {
-        let orange;
-        5;
+        let orange = 5;
         console.log(orange);
     }
     console.log(orange);

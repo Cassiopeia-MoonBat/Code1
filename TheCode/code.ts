@@ -25,9 +25,9 @@ console.log(x);
 console.log(y);
 
 namespace Post {
-    let orange: number 0;
+    let orange: number = 0;
     {
-        let orange: number 5;
+        let orange: number = 5;
         console.log(orange);
     }
     console.log(orange);
