@@ -32,7 +32,7 @@ How to create a markdown file. -> .md
 * difference: merge, rebase, squash
 
 ## 16:06. wir sind am Ente
-![](/Hello/ente.jpg)
+![](../Hello/ente.jpg)
 
 
 
@@ -51,7 +51,7 @@ How to create a markdown file. -> .md
 ### Task 2.2 
 * The HTML DOM (Document Object Model) When a web page is loaded, the browser creates a Document Object Model of the page. The HTML DOM model is constructed as a tree of Objects:
 
-![](/Hello/DOM.gif)
+![](../Hello/DOM.gif)
 
 ### Task 2.4
 * https://www.w3schools.com/html/default.asp
@@ -59,7 +59,7 @@ How to create a markdown file. -> .md
 
 
 ## 23.06 14:44 wir sind am Ente.com
-![](/Hello/ente.jpg)
+![](../Hello/ente.jpg)
 
 ## Task 3
 
@@ -68,7 +68,7 @@ How to create a markdown file. -> .md
 * CSS: Cascading Style Sheets
 * 
 
-![](/task3.1.png)
+![](../task3.1.png)
 
 ### Task 3.2
 
