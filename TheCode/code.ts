@@ -35,3 +35,14 @@ namespace Post {
 
 
 
+
+console.log("following the Nim game");
+let nim1: number = 4;
+let nim2: number = 7;
+let nim3: number = 5;
+let nim4: number = 3;
+let nimtemp: number;
+temp = nim1 ^ nim2;
+temp = temp ^ nim3;
+temp = temp ^ nim4;
+console.log(temp);

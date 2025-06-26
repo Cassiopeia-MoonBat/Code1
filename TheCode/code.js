@@ -26,4 +26,9 @@ var Post;
     }
     console.log(orange);
 })(Post || (Post = {}));
+console.log("following the Nim game");
+let nim1 = 1;
+let nim1 = 1;
+let nim1 = 1;
+let nim1 = 1;
 //# sourceMappingURL=code.js.map
