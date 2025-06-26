@@ -44,4 +44,17 @@ else {
     console.log("Nö");
 }
 console.log("Done");
+{
+    let pineapple = "Wash";
+    switch (pineapple) {
+        case ("Rinse"):
+            console.log("Hello");
+            break;
+        case ("Wash"):
+            console.log("Goodbye");
+            break;
+        default:
+            console.log("GoodNight");
+    }
+}
 //# sourceMappingURL=code.js.map
