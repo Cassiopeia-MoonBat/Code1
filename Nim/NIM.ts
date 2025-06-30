@@ -1,12 +1,23 @@
 namespace NIM {
 
-    let a: number = 1;
-    let b: number = 2;
-    let c: number = 3;
-    let d: number = 4;
+    let a: number, b: number, c: number, d: number;
     let player: boolean = false;
 
+
+    function fillRows() {
+        a = Number(prompt("declare the amount of row a"));
+        b = Number(prompt("declare the amount of row b"));
+        c = Number(prompt("declare the amount of row c"));
+        d = Number(prompt("declare the amount of row d"));
+    }
+
+
+
+
+
+
     function playRound() {
+
         displayState();
         playerTurn();
         changePlayer();
@@ -25,7 +36,7 @@ namespace NIM {
     function displayState() {
 
         console.log("a: " + a + "  b: " + b + "  c: " + c + "  d: " + d);
-        console.log("it's player "+player+"s turn");
+        console.log("it's player " + player + "s turn");
     }
 
 
@@ -63,7 +74,7 @@ namespace NIM {
         }
     }
 
-    
+
     function changePlayer() {
         if (player == false) {
             player = true;
@@ -71,12 +82,14 @@ namespace NIM {
             player = false;
         }
     }
-    
-    
+
+
     function showWinner(player: boolean) {
-        console.log("Player "+player+" won!!");
+        console.log("Player " + player + " won!!");
     }
 
+
+    fillRows();
     playRound();
 }
 
