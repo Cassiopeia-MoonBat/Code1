@@ -1,11 +1,14 @@
 "use strict";
 var NIM;
 (function (NIM) {
-    let a = 1;
-    let b = 2;
-    let c = 3;
-    let d = 4;
+    let a, b, c, d;
     let player = false;
+    function fillRows() {
+        a = Number(prompt("declare the amount of row a"));
+        b = Number(prompt("declare the amount of row b"));
+        c = Number(prompt("declare the amount of row c"));
+        d = Number(prompt("declare the amount of row d"));
+    }
     function playRound() {
         displayState();
         playerTurn();
@@ -62,6 +65,7 @@ var NIM;
     function showWinner(player) {
         console.log("Player " + player + " won!!");
     }
+    fillRows();
     playRound();
 })(NIM || (NIM = {}));
 //# sourceMappingURL=NIM.js.map
