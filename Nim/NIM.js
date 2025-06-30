@@ -1,15 +1,15 @@
 "use strict";
 var NIM;
 (function (NIM) {
-    let a, b, c, d;
+    let rows = [0, 0, 0, 0];
     let player = false;
     fillRows();
     playRound();
     function fillRows() {
-        a = Number(prompt("declare the amount of row a"));
-        b = Number(prompt("declare the amount of row b"));
-        c = Number(prompt("declare the amount of row c"));
-        d = Number(prompt("declare the amount of row d"));
+        rows[0] = Number(prompt("declare the amount of row 1"));
+        rows[1] = Number(prompt("declare the amount of row 2"));
+        rows[2] = Number(prompt("declare the amount of row 3"));
+        rows[3] = Number(prompt("declare the amount of row 4"));
     }
     function playRound() {
         displayState();
@@ -26,30 +26,31 @@ var NIM;
         }
     }
     function displayState() {
-        console.log("a: " + a + "  b: " + b + "  c: " + c + "  d: " + d);
+        console.log("row 1: " + rows[0] + "  row 2: " + rows[1] + "  row 3: " + rows[2] + "  row 4: " + rows[3]);
         console.log("it's player " + player + "s turn");
     }
     function playerTurn() {
-        let fillrow = prompt("Choose one Row: a b c d");
+        let fillrow = prompt("Choose one Row: 1 2 3 4");
         let fillamount = Number(prompt("take an amount, min 1"));
         switch (fillrow) {
-            case ("a"):
-                a = a - fillamount;
+            case ("1"):
+                rows[0] = rows[0] - fillamount;
                 break;
-            case ("b"):
-                b = b - fillamount;
+            case ("2"):
+                rows[1] = rows[1] - fillamount;
                 break;
-            case ("c"):
-                c = c - fillamount;
+            case ("3"):
+                rows[2] = rows[2] - fillamount;
                 break;
-            case ("d"):
-                d = d - fillamount;
+            case ("4"):
+                rows[3] = rows[3] - fillamount;
                 break;
         }
     }
     // function changeState() {}
     function checkWin() {
-        if (a == 0 && b == 0 && c == 0 && d == 0) {
+        //if (rows[0] == 0 && rows[1] == 0 && rows[2] == 0 && rows[3] == 0) {
+        if (rows[0] + rows[1] + rows[2] + rows[3] == 0) {
             return true;
         }
         else {
