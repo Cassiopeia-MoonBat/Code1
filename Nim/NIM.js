@@ -3,6 +3,8 @@ var NIM;
 (function (NIM) {
     let a, b, c, d;
     let player = false;
+    fillRows();
+    playRound();
     function fillRows() {
         a = Number(prompt("declare the amount of row a"));
         b = Number(prompt("declare the amount of row b"));
@@ -55,17 +57,15 @@ var NIM;
         }
     }
     function changePlayer() {
-        if (player == false) {
-            player = true;
-        }
-        else {
-            player = false;
-        }
+        //if (player == false) {
+        //    player = true;
+        //} else {
+        //    player = false;
+        //}
+        player = !player;
     }
     function showWinner(player) {
         console.log("Player " + player + " won!!");
     }
-    fillRows();
-    playRound();
 })(NIM || (NIM = {}));
 //# sourceMappingURL=NIM.js.map

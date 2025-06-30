@@ -4,17 +4,20 @@ namespace NIM {
     let player: boolean = false;
 
 
+
+    fillRows();
+    playRound();
+
+
+
+
+
     function fillRows() {
         a = Number(prompt("declare the amount of row a"))!;
         b = Number(prompt("declare the amount of row b"))!;
         c = Number(prompt("declare the amount of row c"))!;
         d = Number(prompt("declare the amount of row d"))!;
     }
-
-
-
-
-
 
     function playRound() {
 
@@ -76,11 +79,12 @@ namespace NIM {
 
 
     function changePlayer() {
-        if (player == false) {
-            player = true;
-        } else {
-            player = false;
-        }
+        //if (player == false) {
+        //    player = true;
+        //} else {
+        //    player = false;
+        //}
+        player = !player ;
     }
 
 
@@ -89,8 +93,7 @@ namespace NIM {
     }
 
 
-    fillRows();
-    playRound();
+
 }
 
 
