@@ -5,10 +5,10 @@ namespace NIM {
 
 
     function fillRows() {
-        a = Number(prompt("declare the amount of row a"));
-        b = Number(prompt("declare the amount of row b"));
-        c = Number(prompt("declare the amount of row c"));
-        d = Number(prompt("declare the amount of row d"));
+        a = Number(prompt("declare the amount of row a"))!;
+        b = Number(prompt("declare the amount of row b"))!;
+        c = Number(prompt("declare the amount of row c"))!;
+        d = Number(prompt("declare the amount of row d"))!;
     }
 
 
