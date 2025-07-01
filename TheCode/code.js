@@ -57,4 +57,12 @@ console.log("Done");
             console.log("GoodNight");
     }
 }
+let o = [1, 2, 3, 4, 5, 6, 7];
+for (let value of o) {
+    console.log(o);
+}
+let hi = { x: 1, y: 2 };
+for (let value in hi) {
+    console.log(o);
+}
 //# sourceMappingURL=code.js.map

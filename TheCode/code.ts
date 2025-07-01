@@ -49,26 +49,39 @@ console.log(nimtemp);
 
 
 
-let banana: number = 2  ;
+let banana: number = 2;
 if (banana == 1) {
     console.log("Hello");
 }
-else{
+else {
     console.log("Nö");
 }
 console.log("Done");
 
 {
-let pineapple: string = "Wash";
-switch (pineapple) {
-    case ("Rinse"):
-        console.log("Hello");
-        break;
-    case ("Wash"):
-        console.log("Goodbye");
-        break;
-    default:
-        console.log("GoodNight");
+    let pineapple: string = "Wash";
+    switch (pineapple) {
+        case ("Rinse"):
+            console.log("Hello");
+            break;
+        case ("Wash"):
+            console.log("Goodbye");
+            break;
+        default:
+            console.log("GoodNight");
+    }
+
 }
 
+
+
+
+let o = [1,2,3,4,5,6,7];
+for (let value of o) {
+    console.log(o);
+}
+
+let hi = { x:1, y:2};
+for (let value in hi){
+    console.log(o);
 }
