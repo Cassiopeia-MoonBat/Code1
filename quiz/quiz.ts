@@ -6,8 +6,8 @@ namespace Quiz {
 
     function quizRun() {
 
-        //quizQuestion();
-        //quizCheck();
+        quizQuestion();
+        quizCheck();
         
 
         let again: string = prompt("Another question, yes or no?")!;

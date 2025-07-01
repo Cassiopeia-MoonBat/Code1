@@ -10,7 +10,7 @@ var Quiz;
                 "No isnt an answer",
                 "this is a test type",
             ],
-            solution: [0, 1],
+            solution: [0, 1]
         }
     ];
 })(Quiz || (Quiz = {}));
