@@ -40,15 +40,42 @@ var Dice;
         if (again == true) {
             diceTypeAmount();
         }
+        else {
+        }
     }
-    // function convert() {      
-    // }
-    function roll(_typeoD, _amount) {
-        for (let i = 0; i >= _amount; i++) {
-            const randomNumber = Math.floor(Math.random() * _typeoD) + 1;
-            results.push[randomNumber];
+    function roll() {
+        for (let i = 0; i <= d4A; i++) {
+            const randomNumber = Math.floor(Math.random() * 4) + 1;
+            results.push(randomNumber);
+        }
+        for (let i = 0; i <= d6A; i++) {
+            const randomNumber = Math.floor(Math.random() * 6) + 1;
+            results.push(randomNumber);
+        }
+        for (let i = 0; i <= d8A; i++) {
+            const randomNumber = Math.floor(Math.random() * 8) + 1;
+            results.push(randomNumber);
+        }
+        for (let i = 0; i <= d10A; i++) {
+            const randomNumber = Math.floor(Math.random() * 10) + 1;
+            results.push(randomNumber);
+        }
+        for (let i = 0; i <= d12A; i++) {
+            const randomNumber = Math.floor(Math.random() * 12) + 1;
+            results.push(randomNumber);
+        }
+        for (let i = 0; i <= d20A; i++) {
+            const randomNumber = Math.floor(Math.random() * 20) + 1;
+            results.push(randomNumber);
         }
         console.log(results);
     }
+    // function roll(_typeoD: number, _amount: number) {
+    //     for ( let i: number = 0; i >= _amount; i++) {
+    //         const randomNumber = Math.floor(Math.random() * _typeoD) + 1;
+    //         results.push(randomNumber);
+    //     }
+    //     console.log(results);
+    // }
 })(Dice || (Dice = {}));
 //# sourceMappingURL=dice.js.map

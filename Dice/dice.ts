@@ -7,7 +7,7 @@ namespace Dice {
     let d12A: number = 0;
     let d20A: number = 0;
 
-    let results: number[]= [];
+    let results: number[] = [];
 
     //let sum: number, median: number, min: number, max: number;
 
@@ -50,24 +50,56 @@ namespace Dice {
 
         if (again == true) {
             diceTypeAmount();
+        } else {
+
         }
 
     }
-    
-    // function convert() {      
-    // }
 
 
 
-    function roll(_typeoD: number, _amount: number) {
-        for ( let i: number = 0; i >= _amount; i++) {
-            const randomNumber = Math.floor(Math.random() * _typeoD) + 1;
-            results.push[randomNumber];
-            
+
+
+    function roll() {
+        for (let i: number = 0; i <= d4A; i++) {
+            const randomNumber: number = Math.floor(Math.random() * 4) + 1;
+            results.push(randomNumber);
         }
+        for (let i: number = 0; i <= d6A; i++) {
+            const randomNumber = Math.floor(Math.random() * 6) + 1;
+            results.push(randomNumber);
+        }
+        for (let i: number = 0; i <= d8A; i++) {
+            const randomNumber = Math.floor(Math.random() * 8) + 1;
+            results.push(randomNumber);
+        }
+        for (let i: number = 0; i <= d10A; i++) {
+            const randomNumber = Math.floor(Math.random() * 10) + 1;
+            results.push(randomNumber);
+        }
+        for (let i: number = 0; i <= d12A; i++) {
+            const randomNumber = Math.floor(Math.random() * 12) + 1;
+            results.push(randomNumber);
+        }
+        for (let i: number = 0; i <= d20A; i++) {
+            const randomNumber = Math.floor(Math.random() * 20) + 1;
+            results.push(randomNumber);
+        }
+
         console.log(results);
     }
 
-    
+
+
+    // function roll(_typeoD: number, _amount: number) {
+    //     for ( let i: number = 0; i >= _amount; i++) {
+    //         const randomNumber = Math.floor(Math.random() * _typeoD) + 1;
+    //         results.push(randomNumber);
+
+    //     }
+    //     console.log(results);
+    // }
+
+
 
 }
