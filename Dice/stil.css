@@ -1,0 +1,12 @@
+body {
+    background-color: #ffff;
+    /*Default bg, similar to the background's base color*/
+    background-position: left bottom;
+    /*Positioning*/
+    background-repeat: no-repeat;
+    /*Prevent showing multiple background images*/
+    background-image: url("coolelements/Dragon\ die.jpg");
+    height: 100vh;
+    background-size: 30%;
+    padding: 20px;
+}

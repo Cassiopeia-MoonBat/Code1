@@ -19,7 +19,7 @@ namespace Dice {
 
 
     let sum: number = 0;
-    let median: number, min: number, max: number;
+    let median: number, min: number, max: number, avg: number;
 
 
     diceTypeAmount();
@@ -156,10 +156,14 @@ namespace Dice {
         }
         console.log("Sum of values of all rows: " + sum);
 
+        //average
+        avg = sum / results.length;
+        console.log("Average "+ avg);
+
         //median
         let sortresults: number[] = results.sort((a, b) => a - b);
-
-        median = sortresults[(sortresults.length - 1) / 2];
+        //console.log(sortresults);
+        median = sortresults[(Math.floor(sortresults.length - 1) / 2)];
         console.log("Median: " + median);
     }
 

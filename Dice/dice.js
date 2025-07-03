@@ -16,7 +16,7 @@ var Dice;
     let resultd12 = [];
     let resultd20 = [];
     let sum = 0;
-    let median, min, max;
+    let median, min, max, avg;
     diceTypeAmount();
     roll();
     calculation();
@@ -128,9 +128,13 @@ var Dice;
             //console.log(results[i]);
         }
         console.log("Sum of values of all rows: " + sum);
+        //average
+        avg = sum / results.length;
+        console.log("Average " + avg);
         //median
         let sortresults = results.sort((a, b) => a - b);
-        median = sortresults[(sortresults.length - 1) / 2];
+        //console.log(sortresults);
+        median = sortresults[(Math.floor(sortresults.length - 1) / 2)];
         console.log("Median: " + median);
     }
 })(Dice || (Dice = {}));
