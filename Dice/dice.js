@@ -8,9 +8,18 @@ var Dice;
     let d12A = 0;
     let d20A = 0;
     let results = [];
-    //let sum: number, median: number, min: number, max: number;
+    // repetition of declaration, ik. cidk how else to do so if not declaring while output in for or so
+    let resultd4 = [];
+    let resultd6 = [];
+    let resultd8 = [];
+    let resultd10 = [];
+    let resultd12 = [];
+    let resultd20 = [];
+    let sum = 0;
+    let median, min, max;
     diceTypeAmount();
     roll();
+    calculation();
     function diceTypeAmount() {
         let dicetype = prompt("select the type of die: d4, d6, d8, d10, d12, d20");
         let diceamount = Number(prompt("select the amount of dice"));
@@ -35,7 +44,7 @@ var Dice;
                 break;
         }
         //debug
-        console.log("d4: " + String(d4A) + "d6: " + String(d6A) + "d8: " + String(d8A) + "d10: " + String(d10A) + "d12: " + String(d12A) + "d20: " + String(d20A));
+        console.log("d4: " + String(d4A) + " d6: " + String(d6A) + " d8: " + String(d8A) + " d10: " + String(d10A) + " d12: " + String(d12A) + " d20: " + String(d20A));
         let again = Boolean(prompt("do you wanna add another input?, type anything to add more"));
         if (again == true) {
             diceTypeAmount();
@@ -43,39 +52,86 @@ var Dice;
         else {
         }
     }
+    // roll in repetitive thing, ugly but working
     function roll() {
-        for (let i = 0; i <= d4A; i++) {
-            const randomNumber = Math.floor(Math.random() * 4) + 1;
-            results.push(randomNumber);
+        if (d4A > 0) {
+            for (let i = 0; i < d4A; i++) {
+                const randomNumber = Math.floor(Math.random() * 4) + 1;
+                resultd4.push(randomNumber);
+                results.push(randomNumber);
+            }
         }
-        for (let i = 0; i <= d6A; i++) {
-            const randomNumber = Math.floor(Math.random() * 6) + 1;
-            results.push(randomNumber);
+        if (d6A > 0) {
+            for (let i = 0; i < d6A; i++) {
+                const randomNumber = Math.floor(Math.random() * 6) + 1;
+                resultd6.push(randomNumber);
+                results.push(randomNumber);
+            }
         }
-        for (let i = 0; i <= d8A; i++) {
-            const randomNumber = Math.floor(Math.random() * 8) + 1;
-            results.push(randomNumber);
+        if (d8A > 0) {
+            for (let i = 0; i < d8A; i++) {
+                const randomNumber = Math.floor(Math.random() * 8) + 1;
+                resultd8.push(randomNumber);
+                results.push(randomNumber);
+            }
         }
-        for (let i = 0; i <= d10A; i++) {
-            const randomNumber = Math.floor(Math.random() * 10) + 1;
-            results.push(randomNumber);
+        if (d10A > 0) {
+            for (let i = 0; i < d10A; i++) {
+                const randomNumber = Math.floor(Math.random() * 10) + 1;
+                resultd10.push(randomNumber);
+                results.push(randomNumber);
+            }
         }
-        for (let i = 0; i <= d12A; i++) {
-            const randomNumber = Math.floor(Math.random() * 12) + 1;
-            results.push(randomNumber);
+        if (d12A > 0) {
+            for (let i = 0; i < d12A; i++) {
+                const randomNumber = Math.floor(Math.random() * 12) + 1;
+                resultd12.push(randomNumber);
+                results.push(randomNumber);
+            }
         }
-        for (let i = 0; i <= d20A; i++) {
-            const randomNumber = Math.floor(Math.random() * 20) + 1;
-            results.push(randomNumber);
+        if (d20A > 0) {
+            for (let i = 0; i < d20A; i++) {
+                const randomNumber = Math.floor(Math.random() * 20) + 1;
+                resultd20.push(randomNumber);
+                results.push(randomNumber);
+            }
         }
+        // repitition that can be done with for loop, bur rn works, KIS, KEEP IT SIMPLE
+        console.log("Rolls of d4: " + resultd4);
+        console.log("Rolls of d6: " + resultd6);
+        console.log("Rolls of d8: " + resultd8);
+        console.log("Rolls of d10: " + resultd10);
+        console.log("Rolls of d12: " + resultd12);
+        console.log("Rolls of d20: " + resultd20);
         console.log(results);
     }
+    // begin of function to comply to DRY:
     // function roll(_typeoD: number, _amount: number) {
+    //     if(_amount > 0) {
     //     for ( let i: number = 0; i >= _amount; i++) {
     //         const randomNumber = Math.floor(Math.random() * _typeoD) + 1;
     //         results.push(randomNumber);
     //     }
     //     console.log(results);
+    //     }
     // }
+    function calculation() {
+        //max 
+        max = Math.max(...results);
+        console.log("Max overall roll value: " + max);
+        //min
+        min = Math.min(...results);
+        console.log("Min overall roll value: " + min);
+        //sum
+        for (let i = 0; i < results.length; i++) {
+            sum = sum + results[i];
+            //console.log(results[i]);
+        }
+        console.log("Sum of values of all rows: " + sum);
+        //median
+        let sortresults = results.sort((a, b) => a - b);
+        median = sortresults[(sortresults.length - 1) / 2];
+        console.log("Median: " + median);
+    }
 })(Dice || (Dice = {}));
 //# sourceMappingURL=dice.js.map
