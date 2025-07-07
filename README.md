@@ -3,7 +3,7 @@
 > We love coding ✨
 
 ## here is a cat
-![](/Hello/spinningcat.gif)
+![](Projects/Hello/spinningcat.gif)
 
 
-<https://cassiopeia-moonbat.github.io/Code1/TheCode/task.html>
+<https://cassiopeia-moonbat.github.io/Code1/Projects/TheCode/task.html>
