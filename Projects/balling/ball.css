@@ -1,11 +1,22 @@
-#ball {
+span {
 
-    display: block;
+    position: absolute;
     background: white;
     border-radius: 50%;
-    height: 50px;
-    width: 50px;
-    margin: 0;
+    height: 1px;
+    width: 1px;
+    transform: matrix(10,0,0,10,10,50);
+    /* matrix (scaleX (), skewY (), skewX (), scaleY (), translateX (), translateY ()) */
+
+
+}
+
+html, body {
+
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
 
 }
 
