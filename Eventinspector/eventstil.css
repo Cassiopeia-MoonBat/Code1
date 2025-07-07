@@ -7,8 +7,12 @@
 
 .box {
 
-    height: 200px;
-    width: 200px;
+    display: flex;
+    width: 90%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
     background-color: gray;
     position: relative;
 
@@ -17,15 +21,12 @@
 #infoBox {
 
     position: fixed;
-    /* Allows placement relative to the viewport */
-    pointer-events: none;
-    /* So it doesn’t block mouse interaction */
+    pointer-events: none; 
     background: #222;
     color: #fff;
     padding: 6px 10px;
     border-radius: 4px;
     font-size: 14px;
-    z-index: 1000;
-    display: none;
-    /* Hidden by default */
+    z-index: 1000; 
+    
 }
