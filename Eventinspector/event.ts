@@ -1,4 +1,4 @@
-namespace eventStil {
+namespace eventExercise {
 
     const infoBox = document.getElementById("infoBox");
 
