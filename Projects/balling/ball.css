@@ -1,0 +1,14 @@
+#ball {
+
+    display: block;
+    background: white;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin: 0;
+
+}
+
+body {
+    background-color: #231f1e;
+}
