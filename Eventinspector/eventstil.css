@@ -1,0 +1,31 @@
+.container {
+    gap: 40px;
+    display: flex;
+    align-items: flex-start;
+}
+
+
+.box {
+
+    height: 200px;
+    width: 200px;
+    background-color: gray;
+    position: relative;
+
+}
+
+#infoBox {
+
+    position: fixed;
+    /* Allows placement relative to the viewport */
+    pointer-events: none;
+    /* So it doesn’t block mouse interaction */
+    background: #222;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    z-index: 1000;
+    display: none;
+    /* Hidden by default */
+}
