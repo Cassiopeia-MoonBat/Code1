@@ -1,27 +1,36 @@
 namespace Ballz {
-    
+
     type Vector = { x: number, y: number };
-    
-    const position: Vector = { x: 100, y: 100 };
-    const velocity: Vector = { x: 2, y: 2 };
-    let ball: HTMLSpanElement;
+    type Ball = {
+        element: HTMLSpanElement,
+        position: Vector,
+        velocity: Vector
+    }
+    window.addEventListener("load", iwannago);
+    let ball: Ball;
 
-    window.addEventListener("load", IWannaGo);
 
-    
-    
 
-    function IWannaGo(): void {
-        ball = document.querySelector("span")!;
-        Move();
+    function iwannago(): void {
+        ball = {
+        element: document.createElement("span"),
+        position:  { x: 100, y: 100 },
+        velocity:  { x: 2, y: 2 }
+        };
+        document.body.appendChild(ball.element);
+        move();
     }
 
 
-    function Move() {
-        position.x += velocity.x;
-        position.y += velocity.y;
-        ball.style.transform = "matrix(10, 0, 0, 10, " + position.x + "," + position.y + ")";
-        setTimeout(Move, 16);
+    function move() {
+        ball.position.x += ball.velocity.x;
+        ball.position.y += ball.velocity.y;
+
+        ball.position.x = (ball.position.x + window.innerWidth) % window.innerWidth;
+        ball.position.y = (ball.position.y + window.innerHeight) % window.innerHeight;
+
+        ball.element.style.transform = "matrix(10, 0, 0, 10, " + ball.position.x + "," + ball.position.y + ")";
+        setTimeout(move, 16);
     }
 
 }
