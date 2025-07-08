@@ -12,11 +12,11 @@ namespace Ballz {
 
     function hndcreateball(): void {
 
-        for (let i = 0; i < Math.floor(Math.random() * 3) + 2; i++) {
+        for (let i = 0; i < Math.floor(Math.random() * 10) + 2; i++) {
             let ball: Ball = {
                 element: document.createElement("span"),
                 position: { x: Math.floor(Math.random() * 2000) + 1, y: Math.floor(Math.random() * 2000) + 1 },
-                velocity: { x: Math.floor(Math.random() * 50) - 25, y: Math.floor(Math.random() * 50) - 25 }
+                velocity: { x: Math.floor(Math.random() * 100) - 50, y: Math.floor(Math.random() * 100) - 50 }
             };
             balls.push(ball);
             document.body.appendChild(ball.element);
@@ -56,7 +56,9 @@ namespace Ballz {
     function checkCollision(): void {
         for (const a in balls) {
             for (let b: number = Number(a) + 1; b < balls.length;b++){
-                let distance: number = Math.sqrt((Math.pow(balls[a].position.x-balls[b].position.x,2))+(Math.pow(balls[a].position.y-balls[b].position.y,2)))
+                let deltaX: number = balls[a].position.x-balls[b].position.x ;
+                let deltaY: number = balls[a].position.y-balls[b].position.y ;
+                let distance: number = Math.sqrt(Math.pow(deltaX,2)+Math.pow(deltaY,2));
                 let threshhold: number = 20;
                 if (distance < threshhold) {
                     console.log("collision");
