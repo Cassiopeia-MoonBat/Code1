@@ -1,10 +1,10 @@
 "use strict";
 var Ballz;
 (function (Ballz) {
-    window.addEventListener("load", iwannago);
+    window.addEventListener("load", hndcreateball);
     let balls = [];
     let timePreviousFrame = Date.now();
-    function iwannago() {
+    function hndcreateball() {
         for (let i = 0; i < Math.floor(Math.random() * 3) + 2; i++) {
             let ball = {
                 element: document.createElement("span"),
@@ -14,28 +14,47 @@ var Ballz;
             balls.push(ball);
             document.body.appendChild(ball.element);
         }
-        move(0);
+        update();
     }
-    function move(_deltaTime) {
-        document.body.addEventListener("click", hndClick);
+    function update() {
         const timeCurrent = Date.now();
         const timeDelta = timeCurrent - timePreviousFrame;
+        move(timeDelta);
+        checkCollision();
+        timePreviousFrame = timeCurrent;
+        //setTimeout(move, 16);
+        requestAnimationFrame(update);
+    }
+    function move(_timeDelta) {
+        document.body.addEventListener("click", hndClick);
         for (let ball of balls) {
-            ball.position.x += (ball.velocity.x * (timeDelta / 1000));
-            ball.position.y += (ball.velocity.y * (timeDelta / 1000));
+            ball.position.x += (ball.velocity.x * (_timeDelta / 1000));
+            ball.position.y += (ball.velocity.y * (_timeDelta / 1000));
             ball.position.x = (ball.position.x + window.innerWidth) % window.innerWidth;
             ball.position.y = (ball.position.y + window.innerHeight) % window.innerHeight;
             ball.element.style.transform = "matrix(10, 0, 0, 10, " + ball.position.x + "," + ball.position.y + ")";
         }
-        timePreviousFrame = timeCurrent;
-        //setTimeout(move, 16);
-        requestAnimationFrame(move);
+    }
+    function checkCollision() {
+        for (const a in balls) {
+            for (let b = Number(a) + 1; b < balls.length; b++) {
+                let distance = Math.sqrt((Math.pow(balls[a].position.x - balls[b].position.x, 2)) + (Math.pow(balls[a].position.y - balls[b].position.y, 2)));
+                let threshhold = 20;
+                if (distance < threshhold) {
+                    console.log("collision");
+                    console.log(distance);
+                    balls[a].velocity.y = -1 * (balls[a].velocity.y);
+                    balls[b].velocity.x = -1 * (balls[b].velocity.x);
+                }
+                else { }
+            }
+        }
     }
     function hndClick(_event) {
         const element = _event.target;
         let name = element.tagName;
-        console.log(name);
-        console.log(element);
+        //console.log(name);
+        //console.log(element);
         if (name == "SPAN") {
             for (let ball of balls) {
                 if (ball.element == element) {
@@ -45,7 +64,7 @@ var Ballz;
                 }
             }
             document.body.removeChild(element);
-            console.log(balls);
+            //console.log(balls);
         }
         else {
             let ball = {
@@ -55,7 +74,7 @@ var Ballz;
             };
             balls.push(ball);
             document.body.appendChild(ball.element);
-            console.log(balls);
+            //console.log(balls);
         }
     }
 })(Ballz || (Ballz = {}));
