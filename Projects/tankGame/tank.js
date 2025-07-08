@@ -14,6 +14,8 @@ var Tank;
             rotation: 0
         };
         document.body.appendChild(tank.element);
+
+        alert("Tank front is directed to the right. press 'W' to move forward, press 'S' to move backwards, move mouse to left and right to rotate")
         //start game loop
         update(0);
     }
